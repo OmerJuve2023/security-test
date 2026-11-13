@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: security-test
+  main:
+    banner-mode: log
+  profiles:
+    active:
+      - dev
+
+jwt:
+  secret: {JWT_SECRET}
+  access-ms: 900000
+  refresh-ms: 60480000
