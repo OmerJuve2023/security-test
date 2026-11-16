@@ -23,4 +23,4 @@ jobs:
         run: chmod +x mvnw
 
       - name: Build with Maven
-        run: ./mvnm -B test
+        run: ./mvnm -B clean verify
