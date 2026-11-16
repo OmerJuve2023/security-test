@@ -12,10 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Give Maven wrapper execute permission
+        run: chmod +x mvnw
+
       - name: Build with Maven
         run: ./mvnm -B test
